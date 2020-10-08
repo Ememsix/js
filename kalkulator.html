@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   1st liczba: <input id="cyfra1" type="number">
+  2ed liczba: <input id="cyfra2" type="number"> <br>
+
+    <div id="opcje">
+        Dodawanie <input type="radio" id="plus" name="opcja" value="dodawanie"> <br>
+        Odejmowanie <input type="radio" id="minus" name="opcja" value="odejmowanie"> <br>
+        Mnożenie <input type="radio" id="Mnoz" name="opcja" value="mnozenie"> <br>
+        Dzielenie <input type="radio" id="dziel" name="opcja" value="dzielenie"> <br>
+    </div>
+
+    <button onclick="wykonajDzialanie()">Oblicz</button>
+
+    <p id="wynik"></p>
+
+    <script>
+        function wykonajDzialanie(){
+            var cyfra1 = document.getElementById('cyfra1').value;
+            var cyfra2 = document.getElementById('cyfra2').value;
+
+            cyfra1 = parseInt(cyfra1);
+            cyfra2 = parseInt(cyfra2);
+
+            var opcje = document.getElementsByName('opcje').value;
+
+            if(document.getElementById('plus').checked){
+                var wynik = cyfra1 + cyfra2;
+                console.log(wynik);
+                document.getElementById('wynik').innerHTML = wynik;
+            }else if(document.getElementById('minus').checked){
+                var wynik = cyfra1 - cyfra2;
+                console.log(wynik);
+                document.getElementById('wynik').innerHTML = wynik;
+            }else if(document.getElementById('Mnoz').checked){
+                var wynik = cyfra1 * cyfra2;
+                console.log(wynik);
+                document.getElementById('wynik').innerHTML = wynik;
+            }else if(document.getElementById('dziel').checked){
+                var wynik = cyfra1 / cyfra2;
+                console.log(wynik);
+                document.getElementById('wynik').innerHTML = wynik;
+            }
+
+        }
+
+    </script>
+</body>
+</html> 
