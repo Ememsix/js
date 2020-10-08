@@ -9,12 +9,21 @@
 <body>
     <button onclick="pokaztekst()">Pokaz tekst</button>
   <p id="nosporotekstu"></p>
+  <img id="obraz" src="https://picsum.photos/200/300">
+  <button onclick="przelaczobraz()"> Pokaż / ukryj obraz</button>
   <script> 
   console.log("hello world");
   function pokaztekst (){
   document.getElementById('nosporotekstu').innerHTML = 
   "ten tekst siepojawi i essa";
   }
+   function przelaczobraz() {
+       if(document.getElementById('obraz').style.display == "block")
+       document.getElementById('obraz').style.display = "none";
+       else
+       document.getElementById('obraz').style.display = "block";
+    }
+   
     </script>
 </body>
 </html>
