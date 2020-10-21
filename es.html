@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +25,7 @@
         setInterval("gameLoop()", 30);
 
         function changeDirection(e){
-            
+
             switch(e.key){
                 case "ArrowUp":
                 kierunek = "up";
@@ -40,16 +39,16 @@
                 case "ArrowRight":
                 kierunek = "right";
                 break;
-                case "W":
+                case "w":
                 kierunek = "up";
                 break;
-                case "S":
+                case "s":
                 kierunek = "down";
                 break;
-                case "A":
+                case "a":
                 kierunek = "left";
                 break;
-                case "D":
+                case "d":
                 kierunek = "right";
                 break;
             }
@@ -76,55 +75,55 @@
             ctx.strokeRect(0,0,10,10)
 
             if(snake[0].x == food.x && snake[0].y == food.y){
-                
+
                 points++;
                 document.getElementById('points').innerHTML = "Score: " + points;
                 spawnFood();
             }else {
                 snake.pop();
             }
-            
+
             var glowax = snake[0].x;
             var gloway = snake[0].y;
 
             switch (kierunek){
                 case "down":
-                
+
                 gloway += 10;
                 break;
                 case "up":
-                
+
                 gloway -= 10;
                 break;
                 case "left":
-                
+
                 glowax -= 10;
                 break;
                 case "right":
-                
+
                 glowax += 10;
                 break;
                 case "down":
-                
+
                 gloway += 10;
                 break;
                 case "up":
-                
+
                 gloway -= 10;
                 break;
                 case "left":
-                
+
                 glowax -= 10;
                 break;
                 case "right":
-                
+
                 glowax += 10;
                 break;
             }
             var nowaGlowa = {x: glowax, y: gloway};
             console.log(nowaGlowa);
             snake.unshift(nowaGlowa);
-            
+
             ctx.fillStyle = "#BE7110";
             ctx.fillRect(food.x, food.y, 10, 10);
 
@@ -142,7 +141,7 @@
                 );
             }
         }
-        
+
     </script>
 </body>
-</html>
+</html> 
